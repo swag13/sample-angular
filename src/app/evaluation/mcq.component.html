@@ -1,5 +1,7 @@
 <div class = 'card' *ngIf='skill'>
     <div class="card-header">
-        {{pageTitle + ': '+ skill.skillName}}
+        <h3> Evaluation for {{skill}} {{level}} </h3>
     </div>
+    Timer : {{count}}
+    <mat-progress-bar mode = "determinate" value = "20"></mat-progress-bar>
 </div>

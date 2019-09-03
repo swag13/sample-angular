@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormControlDirective, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
@@ -14,7 +14,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CountdownTimerModule} from 'ngx-countdown-timer';
+//import {SelectionModel} from '@angular/cdk/collections';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,14 +33,22 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     WelcomeComponent
   ],
   imports: [
+    CountdownTimerModule.forRoot(),
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     MatTableModule,
     MatFormFieldModule,
+    ReactiveFormsModule,
     MatPaginatorModule,
+    MatRadioModule,
+    MatCheckboxModule,
     BrowserAnimationsModule,
+    MatProgressBarModule,
     MatInputModule,
     MatToolbarModule,
+    MatButtonModule,
+    MatSelectModule,
     FormsModule,
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent},

@@ -6,3 +6,13 @@ table {
     font-size: 14px;
     width: 100%;
   }
+
+  .evaluation-button button,
+.evaluation-button a {
+  margin-right: 8px;
+  align-content: center;
+}
+
+.row-highlight {
+  background: gray;
+}
