@@ -21,8 +21,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CountdownTimerModule} from 'ngx-countdown-timer';
+import {MatCardModule} from '@angular/material/card';
 //import {SelectionModel} from '@angular/cdk/collections';
 import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import {HttpClientModule} from '@angular/common/http';
     EvaluationComponent,
     StarComponent,
     McqComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    LoginComponent
   ],
   imports: [
     CountdownTimerModule.forRoot(),
@@ -38,6 +41,7 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     MatTableModule,
+    MatCardModule,
     MatFormFieldModule,
     ReactiveFormsModule,
     MatPaginatorModule,

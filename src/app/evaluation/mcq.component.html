@@ -2,6 +2,23 @@
     <div class="card-header">
         <h3> Evaluation for {{skill}} {{level}} </h3>
     </div>
-    Timer : {{count}}
-    <mat-progress-bar mode = "determinate" value = "20"></mat-progress-bar>
 </div>
+<mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{mcqService.qProgress+1}}</mat-card-title>
+        </mat-card-header>
+        
+        <mat-card-content>
+                <p>{{mcqService.questions[mcqService.qProgress].qn}}
+        </mat-card-content>
+        <mat-card-actions>
+            <ng-container *ngFor="let option of mcqService.questions[mcqService.qProgress].Options;let i = index">
+                <li *ngIf = "option != null" class="collection-item" 
+                (click)="Answer(mcqService.questions[mcqService.qProgress].QnID,i)">
+                    {{option}}
+                </li>
+            </ng-container>
+        </mat-card-actions>
+        </mat-card>
+
